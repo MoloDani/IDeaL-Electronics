@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -15,4 +15,22 @@
 
 body {
   margin: 0;
+}
+
+h1{
+    margin: 10px 0;
+}
+
+h2{
+    margin: 5px 0;
+}
+
+h3{
+    margin: 2px 0;
+}
+
+#fade{
+    background-image: linear-gradient(to right, #F9FFC9 5%, #7CE583 20%, #0f7086 40%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
