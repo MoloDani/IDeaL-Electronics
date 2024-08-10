@@ -5,12 +5,13 @@ function HeroSection() {
   return (
     <div className="hero-section">
       <div id="startingText">
-        <h3>FTC ROBOTICS TEAM</h3>
+        <h1 className="subHeading">FTC ROBOTICS TEAM</h1>
         <h1 id="fade">IDeaL Electronics</h1>
         <h2>RO032</h2>
       </div>
-      <div className="image" id="teamPhoto">
-        <img src="\images\download.jpeg" alt="team photo" />
+
+      <div id="teamPhoto">
+        <img className="image" src="\images\download.jpg" alt="team photo" />
       </div>
     </div>
   );
