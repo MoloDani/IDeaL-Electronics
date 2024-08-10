@@ -30,7 +30,7 @@ h3{
 }
 
 #fade{
-    background-image: linear-gradient(to right, #F9FFC9 5%, #7CE583 20%, #0f7086 40%);
+    background-image: linear-gradient(to right, #eef5b8 5%, #7CE583 20%, #0f7086 40%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
