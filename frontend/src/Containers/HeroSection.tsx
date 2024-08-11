@@ -5,9 +5,9 @@ function HeroSection() {
   return (
     <div className="hero-section">
       <div id="startingText">
-        <h1 className="subHeading">FTC ROBOTICS TEAM</h1>
+        <h2>FTC ROBOTICS TEAM</h2>
         <h1 id="fade">IDeaL Electronics</h1>
-        <h2>RO032</h2>
+        <h3>RO032</h3>
       </div>
 
       <div id="teamPhoto">

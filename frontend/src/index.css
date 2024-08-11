@@ -20,28 +20,29 @@ body {
 }
 
 h1{
+  font-family: "DM Sans", "Sans Bold";
+  font-weight: 650;
+  letter-spacing: 0.05em;
   margin: 10px 0;
 }
 
 h2{
+  font-family: "DM Sans", "Sans Bold";
+  font-size: 0.5em;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  margin: 0 3px;
+}
+
+h3{
+  font-family: "Text Me One", sans-serif;
+  letter-spacing: 0.06em;
   margin: 5px 0;
 }
 
 #fade{
-<<<<<<< HEAD
-    background-image: linear-gradient(to right, #eef5b8 5%, #7CE583 20%, #0f7086 40%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-=======
   background-image: linear-gradient(to right, #F9FFC9 3%, #7CE583 40%, #0f7086 89%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-}
 
-.subHeading{
-  font-size: 0.5em;
-  font-weight: calc(1/0.5em);
-  letter-spacing: 0.2em;
-  margin: 0 3px;
->>>>>>> 1b8a65228c3aee54513def1b483b2d964676a14f
 }
