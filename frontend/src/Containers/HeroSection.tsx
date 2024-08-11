@@ -9,10 +9,6 @@ function HeroSection() {
         <h1 id="textFade">IDeaL Electronics</h1>
         <h2>RO032</h2>
       </div>
-
-      <div className="imagine" id="teamPhoto">
-        <img src="\images\download.jpg" alt="team photo" />
-      </div>
     </div>
   );
 }

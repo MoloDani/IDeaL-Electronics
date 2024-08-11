@@ -1,34 +1,17 @@
 #hero{
-    padding-top: 5vh;
     height: clamp(65vh, 75vh, 85vh);
+    background-image: url("\\images\\download.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
 }
 
-#teamPhoto{
-    height: clamp(200px, 70%, 1000px);
-}
-
-#teamPhoto img{
-    aspect-ratio: 3/2 auto;
-    max-height: 100%;
-}
-
-@media only screen and (min-width: 1024px) {
-    #hero{
-        display: block;
-    }
-
-    #startText{
-        position: absolute;
-        bottom: 30%;
-        z-index: 2;
-        left: 5vw;
-    }
-
-    #teamPhoto{
-        position: absolute;
-        bottom: 10px;
-        z-index: 1;
-        left: clamp(20vw, 30vw, 50vw);
-        height: 90%;
-    }
+#startText{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    left: 10vw;
 }
