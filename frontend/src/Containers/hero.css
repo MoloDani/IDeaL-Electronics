@@ -1,52 +1,7 @@
 .hero-section{
-    display: block;
+    display: flex;
     position: relative;
     box-sizing: border-box;
     height: 70vh;
-}
-
-#startingText{
-    position: absolute;
-    bottom: 30%;
-    left: 10vw;
-    z-index: 2;
-}
-
-#teamPhoto{
-    position: absolute;
-    bottom: 0;
-    left: 40vw;
-    z-index: 1;
-    margin: 5px 0;
-}
-
-.image{
-    height: 60%;
-    max-width: 90%;
-}
-
-@media all and (max-width: 1024px) {
-    .hero-section{
-        display: flex;
-        flex-direction: column;
-        gap: auto;
-    }
-    
-    #startinText{
-        position: static;
-        bottom: auto;
-        left: auto;
-    }   
-
-    #teamPhoto{
-        position: static;
-        text-align: center;
-        bottom: auto;
-        left: auto;
-    }
-
-    .image{
-        width: 90%;
-        height: auto;
-    }
+    flex-direction: column;
 }
