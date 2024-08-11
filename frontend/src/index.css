@@ -24,7 +24,7 @@
 
 body {
   margin: 0;
-  font-size: clamp(25px, 3vw, 35px);
+  font-size: clamp(30px, 3vw, 35px);
   font-weight: calc(1/2em);
   color: var(--text);
 }
