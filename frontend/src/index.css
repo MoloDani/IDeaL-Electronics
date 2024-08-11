@@ -15,7 +15,8 @@
 
 body {
   margin: 0;
-  font-size: 3vw;
+  font-size: clamp(20px, 3vw, 30px);
+
   font-weight: calc(1/2em);
 }
 

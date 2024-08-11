@@ -2,12 +2,12 @@
     display: block;
     position: relative;
     box-sizing: border-box;
-    height: 40vw;
+    height: 80vh;
 }
 
 #startingText{
     position: absolute;
-    bottom: 30%;
+    bottom: 40%;    
     left: 10vw;
     z-index: 2;
 }
@@ -15,11 +15,19 @@
 #teamPhoto{
     position: absolute;
     bottom: 0;
-    left: 45vw;
+    left: 30vw;
+    margin: 0;
     z-index: 1;
+    padding: 0;
+    border: 0;
 }
 
 .image{
-    height: 60%;
-    max-width: 90%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#decode{
+    
 }

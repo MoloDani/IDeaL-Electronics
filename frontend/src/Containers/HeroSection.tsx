@@ -7,7 +7,7 @@ function HeroSection() {
       <div id="startingText">
         <h2>FTC ROBOTICS TEAM</h2>
         <h1 id="fade">IDeaL Electronics</h1>
-        <h3>RO032</h3>
+        <h3 id="decode">RO032</h3>
       </div>
 
       <div id="teamPhoto">
