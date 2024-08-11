@@ -7,11 +7,11 @@ function HeroSection() {
     <div className="container" id="hero">
       <div id="startText">
         <h3>FTC ROBOTICS TEAM</h3>
-        <h1>IDeaL Electronics</h1>
-        <h2 id = "decode">RO032</h2>
+        <h1 id="textFade">IDeaL Electronics</h1>
+        <h2>RO032</h2>
       </div>
 
-      <div className="imagine">
+      <div className="imagine" id="teamPhoto">
         <img src="\images\download.jpg" alt="team photo" />
       </div>
     </div>

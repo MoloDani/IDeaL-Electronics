@@ -24,6 +24,8 @@
 
 body {
   margin: 0;
+  font-size: clamp(25px, 3vw, 35px);
+  font-weight: calc(1/2em);
   color: var(--text);
 }
 
@@ -31,10 +33,10 @@ h1{
   font-family: "DM Sans", "Sans Bold";
   font-weight: 650;
   letter-spacing: 0.05em;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
-h2{
+h3{
   font-family: "DM Sans", "Sans Bold";
   font-size: 0.5em;
   font-weight: 400;
@@ -42,18 +44,12 @@ h2{
   margin: 0 3px;
 }
 
-h3{
+h2{
   font-family: "Text Me One", sans-serif;
   letter-spacing: 0.06em;
   margin: 5px 0;
 }
 
-#fade{
-  background-image: linear-gradient(to right, #F9FFC9 3%, #7CE583 40%, #0f7086 89%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-
-}
 #textFade{
   background-image: var(--fade-color);
   -webkit-text-fill-color: transparent;
@@ -74,12 +70,14 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  height: clamp(500px, 60vh, 1000px);
 }
 
 img{
   object-fit: cover;
-  height: 100%;
   max-width: 100%;
+  height: 100%;
 }
 
 .container{
@@ -89,5 +87,5 @@ img{
   flex-direction: column;
   width: 100%;
   padding: 0 30px;
-  gap: 50px;
+  gap: 2vh;
 }
