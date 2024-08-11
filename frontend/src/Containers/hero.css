@@ -1,25 +1,7 @@
-.hero-section{
-    display: block;
-    position: relative;
-    box-sizing: border-box;
-    height: 40vw;
+#hero{
+    height: clamp(55vh, 65vh, 75vh);
 }
 
-#startingText{
-    position: absolute;
-    bottom: 30%;
-    left: 10vw;
-    z-index: 2;
-}
+#startText{
 
-#teamPhoto{
-    position: absolute;
-    bottom: 0;
-    left: 45vw;
-    z-index: 1;
-}
-
-.image{
-    height: 60%;
-    max-width: 90%;
 }

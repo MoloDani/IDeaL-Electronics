@@ -3,15 +3,15 @@ import "./hero.css";
 
 function HeroSection() {
   return (
-    <div className="hero-section">
-      <div id="startingText">
-        <h2>FTC ROBOTICS TEAM</h2>
-        <h1 id="fade">IDeaL Electronics</h1>
-        <h3>RO032</h3>
+    <div className="container" id="hero">
+      <div id="startText">
+        <h3>FTC ROBOTICS TEAM</h3>
+        <h1>IDeaL Electronics</h1>
+        <h2>RO032</h2>
       </div>
 
-      <div id="teamPhoto">
-        <img className="image" src="\images\download.jpg" alt="team photo" />
+      <div className="imagine">
+        <img src="\images\download.jpg" alt="team photo" />
       </div>
     </div>
   );
