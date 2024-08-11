@@ -1,7 +1,7 @@
-.hero-section{
-    display: flex;
-    position: relative;
-    box-sizing: border-box;
-    height: 70vh;
-    flex-direction: column;
+#hero{
+    height: clamp(55vh, 65vh, 75vh);
+}
+
+#startText{
+
 }
