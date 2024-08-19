@@ -9,12 +9,25 @@ export interface sez {
   rezultate: string[];
 }
 
-interface Props {
-  sezoane: sez[];
-}
-
 function Sezoane() {
-  let rez = ["nimic", "wow"];
+  let rez = [
+    {
+      numeSez: "DeepDown",
+      rezultate: ["urmeaza", "unknown"],
+    },
+    {
+      numeSez: "Covrigi",
+      rezultate: ["loc 1", "fortza"],
+    },
+    {
+      numeSez: "Altceva",
+      rezultate: ["?!>?", "vom vedea ce va fi"],
+    },
+  ];
+
+  const handleClick = () => {
+    return 1;
+  };
 
   return (
     <div className="container" id="sezoane">
@@ -24,7 +37,13 @@ function Sezoane() {
       </div>
 
       <div id="containerSez">
-        <Sezon numeSez="DeepDown" rezultate={rez} />
+        {rez.map((sez: sez) => (
+          <Sezon
+            key={sez.numeSez}
+            numeSez={sez.numeSez}
+            rezultate={sez.rezultate}
+          />
+        ))}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { sez } from "./Sezoane";
 import "./sezon.css";
 
@@ -7,9 +7,11 @@ import "./sezon.css";
 function Sezon({ numeSez, rezultate }: sez) {
   return (
     <div className="sezCard">
-      <h1 id="textFade">{numeSez}</h1>
+      <div className="logoSez">
+        <h1>{numeSez}</h1>
+      </div>
       {rezultate.map((item) => (
-        <li>{item}</li>
+        <li key={item}>{item}</li>
       ))}
     </div>
   );
