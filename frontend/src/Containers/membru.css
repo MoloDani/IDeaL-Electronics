@@ -1,0 +1,16 @@
+.membruCard{
+    display: inline-block;
+    background-color: var(--dark-green1);
+    width: 80vw;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex: 0 0 auto;
+    height: 60vh;
+}
+
+@media only screen and (min-width: 700px) {
+    .membruCard{
+        width: 31vw;
+    }
+}

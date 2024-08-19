@@ -4,6 +4,7 @@ import "./App.css";
 import HeroSection from "./Containers/HeroSection";
 import AboutUs from "./Containers/AboutUs";
 import Sezoane from "./Containers/Sezoane";
+import Membri from "./Containers/Membri";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <HeroSection />
       <AboutUs />
       <Sezoane />
+      <Membri />
     </div>
   );
 }

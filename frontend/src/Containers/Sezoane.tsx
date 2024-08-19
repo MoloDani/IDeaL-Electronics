@@ -25,15 +25,11 @@ function Sezoane() {
     },
   ];
 
-  const handleClick = () => {
-    return 1;
-  };
-
   return (
     <div className="container" id="sezoane">
       <div className="startText">
         <h3>SEZOANE</h3>
-        <h2>Cu ce ne mandrim noi</h2>
+        <h2>Cu ce ne mandrim noi!</h2>
       </div>
 
       <div id="containerSez">

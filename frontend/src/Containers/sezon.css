@@ -6,8 +6,8 @@
     flex-direction: column;
     border-radius: 15px;
     align-items: center;
-    gap: 15px;
-    margin: 2vh auto;
+    gap: 30px;
+    margin: auto;
     transition: all 0.3s;
 }
 
