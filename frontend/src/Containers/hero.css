@@ -1,4 +1,5 @@
 #hero{
+<<<<<<< HEAD
     height: clamp(65vh, 75vh, 85vh);
     background-image: url("\\images\\download.jpg");
     background-position: center;
@@ -14,4 +15,11 @@
     justify-content: center;
     height: 100%;
     left: 10vw;
+=======
+    height: clamp(55vh, 65vh, 75vh);
+}
+
+#startText{
+
+>>>>>>> parent of dbb6680 (hero - almost finished)
 }

@@ -24,8 +24,6 @@
 
 body {
   margin: 0;
-  font-size: clamp(25px, 3vw, 35px);
-  font-weight: calc(1/2em);
   color: var(--text);
 }
 
@@ -33,10 +31,10 @@ h1{
   font-family: "DM Sans", "Sans Bold";
   font-weight: 650;
   letter-spacing: 0.05em;
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
-h3{
+h2{
   font-family: "DM Sans", "Sans Bold";
   font-size: 0.5em;
   font-weight: 400;
@@ -44,12 +42,18 @@ h3{
   margin: 0 3px;
 }
 
-h2{
+h3{
   font-family: "Text Me One", sans-serif;
   letter-spacing: 0.06em;
   margin: 5px 0;
 }
 
+#fade{
+  background-image: linear-gradient(to right, #F9FFC9 3%, #7CE583 40%, #0f7086 89%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+}
 #textFade{
   background-image: var(--fade-color);
   -webkit-text-fill-color: transparent;
@@ -66,6 +70,21 @@ h2{
   padding: 0 0.5em;
 }
 
+<<<<<<< HEAD
+=======
+.imagine{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  object-fit: cover;
+  height: 100%;
+  max-width: 100%;
+}
+
+>>>>>>> parent of dbb6680 (hero - almost finished)
 .container{
   display: flex;
   position: relative;
@@ -73,5 +92,5 @@ h2{
   flex-direction: column;
   width: 100%;
   padding: 0 30px;
-  gap: 2vh;
+  gap: 50px;
 }
