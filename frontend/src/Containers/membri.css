@@ -1,11 +1,25 @@
-#containerMemb {
+.containerMemb {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 30px;
   padding: 0 2vw;
-  overflow: hidden;
-  height: 70vh;
-  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10vw;
+}
+
+.slideButton {
+  position: absolute;
+}
+
+#left {
+  left: 5vw;
+}
+
+#right {
+  right: 5vw;
 }
 
 @media only screen and (min-width: 700px) {

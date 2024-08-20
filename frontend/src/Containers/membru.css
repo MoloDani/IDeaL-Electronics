@@ -1,16 +1,78 @@
-.membruCard{
-    display: inline-block;
-    background-color: var(--dark-green1);
-    width: 80vw;
-    padding: 20px 10px;
-    box-sizing: border-box;
-    overflow: hidden;
-    flex: 0 0 auto;
-    height: 60vh;
+.membruCard {
+  background-color: var(--dark-green1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  overflow: hidden;
+  position: relative;
 }
 
-@media only screen and (min-width: 700px) {
-    .membruCard{
-        width: 31vw;
-    }
+.side {
+  transition: all 1s;
+  width: clamp(6vh, 20vw, 34vh);
+  height: clamp(20vw, 50vh, 34vw);
+  font-size: 0.8em;
+}
+
+.center {
+  box-shadow: 0 0 50px 10px var(--accent-green);
+  transition: all 1s;
+  width: clamp(10vh, 30vw, 50vh);
+  height: clamp(30vw, 75vh, 50vw);
+}
+
+.membruCard img {
+  width: 100%;
+  height: 100%;
+}
+
+.textCard {
+  padding: 10px 30px;
+}
+
+.textCard hr {
+  margin: 0 0 10px 0;
+  width: 70%;
+}
+
+#centerBorder {
+  border: 3px solid;
+  border-radius: 5px;
+}
+
+#sideBorder {
+  border: 1px solid;
+  border-radius: 2px;
+}
+
+.imgContainer {
+  position: relative;
+  height: 70%;
+  width: 100%;
+}
+
+/* for the wave line */
+
+.custom-shape-divider-bottom-1724190201 {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1724190201 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 5vh;
+}
+
+.custom-shape-divider-bottom-1724190201 .shape-fill {
+  fill: var(--dark-green1);
+}
+
+@media only screen and (min-width: 2700px) {
 }
