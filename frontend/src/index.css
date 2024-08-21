@@ -1,5 +1,6 @@
 :root {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,30 +14,34 @@
   -webkit-text-size-adjust: 100%;
 
   --black: rgb(0, 0, 0);
-  --text: #D8D8D8;
-  --accent-green: #34BE4D;
-  --dark-green1: #1E5E1B;
+  --text: #d8d8d8;
+  --accent-green: #34be4d;
+  --dark-green1: #1e5e1b;
   --dark-green2: #152115;
-  --light-green1: #00FF1E;
-  --light-green2: #A6FFB9;
-  --fade-color: linear-gradient(to right, #F9FFC9 3%, #7CE583 40%, #0f7086 80%);
+  --light-green1: #00ff1e;
+  --light-green2: #a6ffb9;
+  --fade-color: linear-gradient(to right, #f9ffc9 3%, #7ce583 40%, #0f7086 80%);
+}
+
+#app {
+  position: relative;
 }
 
 body {
   margin: 0;
   font-size: clamp(30px, 3vw, 35px);
-  font-weight: calc(1/2em);
+  font-weight: calc(1 / 2em);
   color: var(--text);
   padding: 0 30px;
 }
 
-p{
+p {
   line-height: 1.4em;
   text-align: initial;
   font-size: 0.4em;
 }
 
-h1{
+h1 {
   font-family: "DM Sans", "Sans Bold";
   font-weight: 650;
   margin: 4px 0;
@@ -44,7 +49,7 @@ h1{
   line-height: 1.2em;
 }
 
-h3{
+h3 {
   font-family: "DM Sans", "Sans Bold";
   font-size: 0.5em;
   font-weight: 400;
@@ -53,25 +58,25 @@ h3{
   margin: 2px 2px;
 }
 
-h2{
+h2 {
   margin: 3px 0 7px 0;
   line-height: 1.2em;
   letter-spacing: -0.05em;
 }
 
-#teamNumber{
+#teamNumber {
   font-family: "Text Me One", sans-serif;
   letter-spacing: 0;
 }
 
-#textFade{
+#textFade {
   background-image: var(--fade-color);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   width: fit-content;
 }
 
-.backgroundText{
+.backgroundText {
   background-color: var(--dark-green1);
   display: flex;
   justify-content: center;
@@ -80,7 +85,7 @@ h2{
   padding: 0 0.5em;
 }
 
-.imagine{
+.imagine {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,13 +93,13 @@ h2{
   height: clamp(500px, 60vh, 1000px);
 }
 
-img{
+img {
   object-fit: cover;
   max-width: 100%;
   height: 100%;
 }
 
-.container{
+.container {
   display: flex;
   position: relative;
   box-sizing: border-box;
@@ -104,21 +109,21 @@ img{
   gap: 2vh;
 }
 
-.longText{
+.longText {
   width: 60vw;
   margin: auto;
 }
 
 @media only screen and (min-width: 700px) {
-  .container{
+  .container {
     padding: 8vh 0 3vh 0;
   }
 
-  .startText{
+  .startText {
     padding: 0 5vw;
   }
 
-  .longText{
+  .longText {
     width: 40vw;
   }
 }

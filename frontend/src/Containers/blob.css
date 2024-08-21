@@ -1,0 +1,6 @@
+#blob {
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 0 50vh 20vh var(--accent-green);
+  font-size: 0;
+}
