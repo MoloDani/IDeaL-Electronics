@@ -1,37 +1,37 @@
-#hero{
-    height: clamp(65vh, 75vh, 85vh);
-    margin-bottom: 3vh;
+#hero {
+  height: clamp(65vh, 75vh, 85vh);
+  margin-bottom: 3vh;
 }
 
-#teamPhoto{
-    height: clamp(200px, 70%, 1000px);
-    box-shadow: 0 0 25px 5px var(--accent-green);
+#teamPhoto {
+  height: clamp(200px, 70%, 1000px);
+  box-shadow: 0 0 25px 5px var(--accent-green);
 }
 
-#teamPhoto img{
-    aspect-ratio: 3/2 auto;
-    max-height: 100%;
+#teamPhoto img {
+  aspect-ratio: 3/2 auto;
+  max-height: 100%;
 }
 
 @media only screen and (min-width: 700px) {
-    #hero{
-        display: block;
-        height: clamp(40vh, 60vh, 70vh);
-    }
+  #hero {
+    display: block;
+    height: clamp(40vh, 60vh, 70vh);
+  }
 
-    #numeEchipa{
-        position: absolute;
-        bottom: 30%;
-        z-index: 2;
-    }
+  #numeEchipa {
+    position: absolute;
+    bottom: 30%;
+    z-index: 2;
+  }
 
-    #teamPhoto{
-        position: absolute;
-        bottom: 0;
-        z-index: 1;
-        left: 35vw;
-        height: clamp(20vw, 90%, 60vw);
-        max-width: 80%;
-        box-shadow: 0 0 50px 5px var(--accent-green);
-    }
+  #teamPhoto {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    left: 35vw;
+    height: clamp(20vw, 90%, 60vw);
+    max-width: 80%;
+    box-shadow: 0 0 50px 5px var(--accent-green);
+  }
 }

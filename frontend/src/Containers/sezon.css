@@ -1,40 +1,40 @@
-.sezCard{
-    background-color: var(--dark-green1);
-    width: 80vw;
-    padding: 10px 3vw;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-    align-items: center;
-    gap: 30px;
-    margin: auto;
-    transition: all 0.3s;
+.sezCard {
+  background-color: var(--dark-green1);
+  width: 80vw;
+  padding: 10px 3vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  align-items: center;
+  gap: 30px;
+  margin: auto;
+  transition: all 0.3s;
 }
 
-.sezCard li{
-    list-style-type: none;
+.sezCard li {
+  list-style-type: none;
 }
 
 @media only screen and (min-width: 700px) {
-    .sezCard{
-        flex-direction: row;
-        width: 95%;
-        box-sizing: border-box;
-    }
+  .sezCard {
+    flex-direction: row;
+    width: 95%;
+    box-sizing: border-box;
+  }
 
-    .logoSez{
-        flex-grow: 4;
-    }
+  .logoSez {
+    flex-grow: 4;
+  }
 
-    .sezCard:hover{
-        background-color: var(--dark-green2);
-        box-shadow: 0 0 100px 5px var(--accent-green);
-        
-        width: 100%;
-        transition: all 0.3s;
-    }
+  .sezCard:hover {
+    background-color: var(--dark-green2);
+    box-shadow: 0 0 100px 5px var(--accent-green);
 
-    .sezCard::after{
-        transition: all 1s;
-    }
+    width: 100%;
+    transition: all 0.3s;
+  }
+
+  .sezCard::after {
+    transition: all 1s;
+  }
 }
