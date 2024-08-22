@@ -24,28 +24,46 @@
 
 body {
   margin: 0;
+<<<<<<< HEAD
+=======
+  font-size: clamp(30px, 3vw, 35px);
+  font-weight: calc(1/2em);
+>>>>>>> 928eb9b442f34f347d2aff93fe48fb8b6c90759a
   color: var(--text);
+}
+
+p{
+  line-height: 1.4em;
+  text-align: initial;
+  font-size: 0.4em;
 }
 
 h1{
   font-family: "DM Sans", "Sans Bold";
   font-weight: 650;
+<<<<<<< HEAD
   letter-spacing: 0.05em;
   margin: 10px 0;
+=======
+  margin: 5px 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2em;
+>>>>>>> 928eb9b442f34f347d2aff93fe48fb8b6c90759a
 }
 
 h2{
   font-family: "DM Sans", "Sans Bold";
   font-size: 0.5em;
   font-weight: 400;
-  letter-spacing: 0.3em;
-  margin: 0 3px;
+  margin: 3px 0;
+  letter-spacing: -0.01em;
+  line-height: 1.2em;
 }
 
 h3{
   font-family: "Text Me One", sans-serif;
-  letter-spacing: 0.06em;
   margin: 5px 0;
+  line-height: 1.2em;
 }
 
 #fade{

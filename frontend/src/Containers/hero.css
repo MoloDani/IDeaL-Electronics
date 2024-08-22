@@ -8,6 +8,7 @@
     background-attachment: fixed;
 }
 
+<<<<<<< HEAD
 #startText{
     position: absolute;
     display: flex;
@@ -17,9 +18,38 @@
     left: 10vw;
 =======
     height: clamp(55vh, 65vh, 75vh);
+=======
+#teamPhoto{
+    height: clamp(200px, 70%, 1000px);
+    box-shadow: 0 0 50px 5px var(--accent-green);
+>>>>>>> 928eb9b442f34f347d2aff93fe48fb8b6c90759a
 }
 
 #startText{
 
+<<<<<<< HEAD
 >>>>>>> parent of dbb6680 (hero - almost finished)
+=======
+@media only screen and (min-width: 700px) {
+    #hero{
+        display: block;
+        height: clamp(40vh, 60vh, 70vh);
+    }
+
+    #startText{
+        position: absolute;
+        bottom: 30%;
+        z-index: 2;
+        left: 5vw;
+    }
+
+    #teamPhoto{
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        left: 35vw;
+        height: clamp(20vw, 90%, 60vw);
+        max-width: 80%;
+    }
+>>>>>>> 928eb9b442f34f347d2aff93fe48fb8b6c90759a
 }
