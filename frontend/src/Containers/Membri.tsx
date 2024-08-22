@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./membri.css";
 import Membru from "./Membru";
 
@@ -11,6 +11,17 @@ export interface Member {
 }
 
 function Membri() {
+  const [backendData, setBackendData] = useState([[]]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/members")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setBackendData(data);
+      });
+  }, []);
+
   return (
     <div className="container" id="members">
       <div className="startText">
@@ -19,29 +30,15 @@ function Membri() {
       </div>
 
       <div className="containerMemb">
-        <Membru
-          key={1}
-          poza="./images/download.jpg"
-          nume="Georgi"
-          functie="PR"
-          tip="side"
-        />
-
-        <Membru
-          key={2}
-          poza="./images/membrii/daniel.jpg"
-          nume="Daniel"
-          functie="programare"
-          tip="center"
-        />
-
-        <Membru
-          key={3}
-          poza="./images/download.jpg"
-          nume="Tudor"
-          functie="programare"
-          tip="side"
-        />
+        {backendData.map((membru, index) => (
+          <Membru
+            key={index}
+            poza={"./images/membrii/" + membru.nume + ".jpg"}
+            nume={membru.nume}
+            functie={membru.functie}
+            tip=""
+          />
+        ))}
 
         <button className="slideButton" id="left"></button>
         <button className="slideButton" id="right"></button>
