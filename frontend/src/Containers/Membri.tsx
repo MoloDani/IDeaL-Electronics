@@ -11,13 +11,6 @@ export interface Member {
 }
 
 function Membri() {
-  let membri = [
-    { nume: "Daniel", functie: "programare" },
-    { nume: "Darius", functie: "programare" },
-    { nume: "Tudor", functie: "mecanica" },
-    { nume: "Georgiana", functie: "PR" },
-  ];
-
   return (
     <div className="container" id="members">
       <div className="startText">
