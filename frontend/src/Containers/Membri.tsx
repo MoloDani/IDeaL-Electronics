@@ -12,12 +12,12 @@ export interface Member {
 
 function Membri() {
   const [backendData, setBackendData] = useState([[]]);
+  let myVar = 1;
 
   useEffect(() => {
     fetch("http://localhost:5000/members")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setBackendData(data);
       });
   }, []);

@@ -105,6 +105,10 @@ img {
   gap: 2vh;
 }
 
+.startText {
+  z-index: 2;
+}
+
 .longText {
   width: 60vw;
   margin: auto;
