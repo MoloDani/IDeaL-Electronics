@@ -12,7 +12,7 @@ export interface Member {
 
 function Membri() {
   const [backendData, setBackendData] = useState([[]]);
-  let myVar = 1;
+  const [cur, setCur] = useState(0);
 
   useEffect(() => {
     fetch("http://localhost:5000/members")
@@ -22,6 +22,33 @@ function Membri() {
       });
   }, []);
 
+  const normalize = (x: number) => {
+    if (x < 0) return x + backendData.length;
+    if (x >= backendData.length) return x - backendData.length;
+    return x;
+  };
+
+  const cardType = (curInd: number, ind: number) => {
+    const next = normalize(cur + 1);
+    const prev = normalize(cur - 1);
+    const outPrev = normalize(cur - 2);
+    const outNext = normalize(cur + 2);
+
+    if (ind === curInd) return "center";
+    if (ind === next) return "side left";
+    if (ind === prev) return "side right";
+    if (ind === outPrev) return "side prev";
+    if (ind === outNext) return "side next";
+    return "outside";
+  };
+
+  const setImgId = (id: number, offset: number) => {
+    id += offset;
+    id = normalize(id);
+
+    setCur(id);
+  };
+
   return (
     <div className="container" id="members">
       <div className="startText">
@@ -30,18 +57,26 @@ function Membri() {
       </div>
 
       <div className="containerMemb">
-        {backendData.map((membru, index) => (
+        {backendData.map((membru, i) => (
           <Membru
-            key={index}
-            poza={"./images/membrii/" + membru.nume + ".jpg"}
-            nume={membru.nume}
-            functie={membru.functie}
-            tip=""
+            key={i}
+            poza={membru.img}
+            nume={membru.name}
+            functie={membru.fct}
+            tip={cardType(cur, i)}
           />
         ))}
 
-        <button className="slideButton" id="left"></button>
-        <button className="slideButton" id="right"></button>
+        <button
+          className="slideButton"
+          id="left"
+          onClick={() => setImgId(cur, -1)}
+        ></button>
+        <button
+          className="slideButton"
+          id="right"
+          onClick={() => setImgId(cur, +1)}
+        ></button>
       </div>
     </div>
   );

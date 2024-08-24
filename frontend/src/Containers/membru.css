@@ -4,21 +4,49 @@
   flex-direction: column;
   border-radius: 1em;
   overflow: hidden;
-  position: relative;
+  position: absolute;
 }
 
 .side {
-  transition: all 1s;
   width: clamp(6vh, 20vw, 34vh);
   height: clamp(20vw, 50vh, 34vw);
   font-size: 0.8em;
+  transition: all 1s;
+}
+
+.side {
+  width: clamp(6vh, 20vw, 34vh);
+  height: clamp(20vw, 50vh, 34vw);
+  font-size: 0.8em;
+  transition: all 1s;
+}
+
+.left {
+  left: 15vw;
+}
+
+.right {
+  left: 65vw;
+}
+
+.next {
+  left: -20vw;
+}
+
+.prev {
+  left: 110vw;
 }
 
 .center {
+  left: 37%;
   box-shadow: 0 0 50px 10px var(--accent-green);
-  transition: all 1s;
   width: clamp(10vh, 30vw, 50vh);
   height: clamp(30vw, 75vh, 50vw);
+  transition: all 1s;
+}
+
+.outside {
+  display: none;
 }
 
 .membruCard img {
@@ -74,5 +102,5 @@
   fill: var(--dark-green1);
 }
 
-@media only screen and (min-width: 2700px) {
+@media only screen and (max-width: 700px) {
 }

@@ -3,10 +3,12 @@ import "./membru.css";
 import { Member } from "./Membri";
 
 function Membru({ poza, nume, functie, tip }: Member) {
+  // console.log(poza);
+
   return (
     <div className={"membruCard " + tip}>
       <div className="imgContainer">
-        <img src={poza} alt={"poza cu " + nume} />
+        <img src={"data:image/jpeg;base64, " + poza} alt={"poza cu " + nume} />
         <div className="custom-shape-divider-bottom-1724190201">
           <svg
             data-name="Layer 1"

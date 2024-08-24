@@ -7,9 +7,9 @@ function HeroSection() {
   const [currentText, setCurrentText] = useState(startText);
   const [animating, setAnimating] = useState(true);
   const [forward, setForward] = useState(true);
-  const duration = 2000; //ms
+  const duration = 2500; //ms
   const shuffleTime = 1200; //ms
-  const timeShow = 1500; //ms
+  const timeShow = 1000; //ms
   const letterDelay = 300; //ms
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 

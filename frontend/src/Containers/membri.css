@@ -8,10 +8,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 10vw;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .slideButton {
   position: absolute;
+  height: 100px;
+  width: 100px;
 }
 
 #left {
