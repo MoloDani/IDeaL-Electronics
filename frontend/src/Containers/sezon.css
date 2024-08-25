@@ -1,21 +1,23 @@
 .sezCard {
-  background-color: var(--dark-green1);
-  width: 80vw;
+  width: 80%;
   padding: 10px 3vw;
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
+  border-radius: 0.7em;
   align-items: center;
   gap: 30px;
   margin: auto;
-  transition: all 0.3s;
+  border: 3px solid var(--grey);
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  transition: all 0.5s;
 }
 
 .sezCard li {
   list-style-type: none;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1000px) {
   .sezCard {
     flex-direction: row;
     width: 95%;
@@ -23,13 +25,14 @@
   }
 
   .logoSez {
-    flex-grow: 4;
+    flex-grow: 1;
   }
 
   .sezCard:hover {
-    background-color: var(--dark-green2);
-    box-shadow: 0 0 100px 5px var(--accent-green);
+    background-color: var(--dark-green1);
+    box-shadow: 0 0 50px 3px var(--accent-green);
     width: 100%;
-    transition: all 0.3s;
+    border-color: transparent;
+    transition: all 0.5s;
   }
 }

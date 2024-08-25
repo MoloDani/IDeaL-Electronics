@@ -36,7 +36,7 @@ function Membru({ poza, nume, functie, tip }: Member) {
 
       <div className="textCard">
         <h2>{nume}</h2>
-        <hr id={tip + "Border"} />
+        <hr id="border" />
         <h3>{functie}</h3>
       </div>
     </div>

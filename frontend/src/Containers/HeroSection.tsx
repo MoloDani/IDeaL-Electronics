@@ -7,10 +7,10 @@ function HeroSection() {
   const [currentText, setCurrentText] = useState(startText);
   const [animating, setAnimating] = useState(true);
   const [forward, setForward] = useState(true);
-  const duration = 2500; //ms
-  const shuffleTime = 1200; //ms
+  const duration = 2000; //ms
+  const shuffleTime = 1000; //ms
   const timeShow = 1000; //ms
-  const letterDelay = 300; //ms
+  const letterDelay = 200; //ms
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function HeroSection() {
       if (startTime === null) startTime = time;
       const elapsedTime = time - startTime;
 
-      if (elapsedTime < duration + totalStops * letterDelay) {
+      if (elapsedTime < duration + shuffleTime + totalStops * letterDelay) {
         let newText = currentText
           .split("")
           .map((char, i) => {
