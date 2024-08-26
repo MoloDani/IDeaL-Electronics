@@ -56,27 +56,24 @@ function Membri() {
         <h2>Sa ne cunoastem mai bine!</h2>
       </div>
 
-      <div className="containerMemb">
-        {backendData.map((membru, i) => (
-          <Membru
-            key={i}
-            poza={membru.img}
-            nume={membru.name}
-            functie={membru.fct}
-            tip={cardType(cur, i)}
-          />
-        ))}
-
-        <button
-          className="arrow"
-          id="left"
-          onClick={() => setImgId(cur, -1)}
-        ></button>
-        <button
-          className="arrow"
-          id="right"
-          onClick={() => setImgId(cur, +1)}
-        ></button>
+      <div className="container">
+        <div className="containerMemb">
+          {backendData.map((membru, i) => (
+            <Membru
+              key={i}
+              poza={membru.img}
+              nume={membru.name}
+              functie={membru.fct}
+              tip={cardType(cur, i)}
+            />
+          ))}
+        </div>
+        <button className="button" id="left" onClick={() => setImgId(cur, +1)}>
+          <img src=".\images\right-arrow.png" alt="" />
+        </button>
+        <button className="button" id="right" onClick={() => setImgId(cur, -1)}>
+          <img src=".\images\right-arrow.png" alt="" />
+        </button>
       </div>
     </div>
   );
