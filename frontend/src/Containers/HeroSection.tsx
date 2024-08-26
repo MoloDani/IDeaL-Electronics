@@ -7,81 +7,60 @@ function HeroSection() {
   const [currentText, setCurrentText] = useState(startText);
   const [animating, setAnimating] = useState(true);
   const [forward, setForward] = useState(true);
-  const duration = 2000; //ms
-  const shuffleTime = 1000; //ms
-  const timeShow = 1000; //ms
+  const letterDuration = 1500; //ms
+  const animationPause = 1000; //ms
   const letterDelay = 200; //ms
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
   useEffect(() => {
     let animationFrame: number;
     let startTime: number | null = null;
-    let stopIndex = -1;
+    let finishIndex = -1;
     const targetText = forward ? endText : startText;
-    const totalStops = targetText.length;
+    const totalLetters = targetText.length;
 
     const animate = (time: number) => {
       if (startTime === null) startTime = time;
       const elapsedTime = time - startTime;
 
-      if (elapsedTime < duration + shuffleTime + totalStops * letterDelay) {
+      if (elapsedTime < letterDuration + totalLetters * letterDelay) {
         let newText = currentText
           .split("")
           .map((char, i) => {
             const charElapsedTime = elapsedTime - i * letterDelay;
             if (charElapsedTime >= 0) {
               if (targetText === startText && i === 5) return "";
-              if (charElapsedTime - shuffleTime < duration && i > stopIndex) {
+              if (charElapsedTime < letterDuration && i > finishIndex) {
                 return characters[
                   Math.floor(Math.random() * characters.length)
                 ];
               }
-              if (
-                charElapsedTime - shuffleTime >= duration &&
-                i === stopIndex + 1
-              ) {
-                stopIndex += 1;
+              if (i === finishIndex + 1) {
+                finishIndex += 1;
               }
             }
-            return i <= stopIndex ? targetText[i] : char;
+            return i <= finishIndex ? targetText[i] : char;
           })
           .join("");
 
         setCurrentText(newText);
 
-        if (
-          elapsedTime >=
-          shuffleTime +
-            (stopIndex + 1) * ((duration - shuffleTime) / totalStops)
-        ) {
-          stopIndex += 1;
-        }
-
         animationFrame = requestAnimationFrame(animate);
+        // console.log(animationFrame);
+        // console.log(time);
       } else {
-        setCurrentText(targetText);
+        // console.log("Working");
 
         setTimeout(() => {
-          setAnimating(!animating);
-        }, timeShow);
+          setCurrentText(forward ? endText : startText);
+          cancelAnimationFrame(animationFrame);
+          setForward(!forward);
+        }, animationPause);
       }
     };
 
-    if (animating) {
-      animationFrame = requestAnimationFrame(animate);
-    }
-
-    //clean up
-    return () => cancelAnimationFrame(animationFrame);
-  }, [animating]);
-
-  useEffect(() => {
-    if (!animating) {
-      setCurrentText(forward ? endText : startText);
-      setForward(!forward);
-      setAnimating(true);
-    }
-  }, [animating, forward, endText, startText]);
+    animationFrame = requestAnimationFrame(animate);
+  }, [forward]);
 
   return (
     <div className="container" id="hero">

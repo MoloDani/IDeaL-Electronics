@@ -68,12 +68,12 @@ function Membri() {
         ))}
 
         <button
-          className="slideButton"
+          className="arrow"
           id="left"
           onClick={() => setImgId(cur, -1)}
         ></button>
         <button
-          className="slideButton"
+          className="arrow"
           id="right"
           onClick={() => setImgId(cur, +1)}
         ></button>

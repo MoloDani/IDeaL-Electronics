@@ -12,19 +12,36 @@
   overflow: hidden;
 }
 
-.slideButton {
+.arrow {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+
+.arrow::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 2em solid transparent;
+  border-bottom: 2em solid transparent;
+  border-left: 4em solid var(--text);
   position: absolute;
-  height: 100px;
-  width: 100px;
-  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #left {
-  left: 0;
+  left: 2em;
+  transform: scaleX(-1);
 }
 
 #right {
-  right: 0;
+  right: 2em;
 }
 
 @media only screen and (min-width: 1000px) {

@@ -28,7 +28,7 @@ connection.query($query, (err, result, fields) =>{
         console.log("An error has occured");
     }
     
-    console.log(result);
+    // console.log(result);
     myTeam = result;
 });
 
