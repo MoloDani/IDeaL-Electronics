@@ -1,46 +1,42 @@
-const mysql = require('mysql');
 const express = require('express');
+const db = require('./db'); // Import the database connection
 const cors = require('cors');
+
 const app = express();
-let myTeam;
-
-const connection = mysql.createConnection({
-    host: 'srv446.hstgr.io',
-    user: 'u726890226_admin',
-    password: 'passDataBase1',
-    database: 'u726890226_IDL',
-    port: 3306
-});
-
-connection.connect((err) => {
-    if(err){
-        console.log(err.code);
-        console.log(err.fatal);
-    }else{
-        console.log("Logged in");
-    }
-});
-
-$query = "SELECT * FROM team";
-
-connection.query($query, (err, result, fields) =>{
-    if(err){
-        console.log("An error has occured");
-    }
-    
-    // console.log(result);
-    myTeam = result;
-});
-
-connection.end(() => {console.log("Logged out")});
+const port = 5000;
 
 app.use(cors({
     origin: 'http://localhost:3000'
 }));
 
-app.get("/members", (req, res) =>{
-    res.json(myTeam);
+app.get("/members", (req, res) => {
+    const query = "SELECT * FROM team";
+
+    db.query(query, (err, result) => {
+        if (err) {
+            console.error("An error has occurred:", err);
+            res.status(500).json({ error: "Database query error" });
+            return;
+        }
+        
+        res.json(result);
+    });
 });
 
+app.get("/seasons", (req, res) =>{
+    const query="SELECT * FROM Seasons";
 
-app.listen(5000, () => {console.log("Server started on port 5000")});
+    db.query(query, (err, result) =>{
+        if(err){
+            console.error("An error has occured:", err);
+            res.status(500).json({error: "Database query error"});
+            return;
+        }
+
+        res.json(result);
+    })
+})
+
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
+});
