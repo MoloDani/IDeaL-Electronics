@@ -7,7 +7,8 @@ export interface Member {
   nume: string;
   functie: string;
   tip: string;
-  id?: string;
+  links: string[];
+  types: string[];
 }
 
 function Membri() {
@@ -29,10 +30,10 @@ function Membri() {
   };
 
   const cardType = (curInd: number, ind: number) => {
-    const next = normalize(cur + 1);
-    const prev = normalize(cur - 1);
-    const outPrev = normalize(cur - 2);
-    const outNext = normalize(cur + 2);
+    const next = normalize(cur - 1);
+    const prev = normalize(cur + 1);
+    const outPrev = normalize(cur + 2);
+    const outNext = normalize(cur - 2);
 
     if (ind === curInd) return "center";
     if (ind === next) return "side left";
@@ -65,13 +66,15 @@ function Membri() {
               nume={membru.name}
               functie={membru.fct}
               tip={cardType(cur, i)}
+              links={[membru.link1, membru.link2, membru.link3]}
+              types={[membru.type1, membru.type2, membru.type3]}
             />
           ))}
         </div>
-        <button className="button" id="left" onClick={() => setImgId(cur, +1)}>
+        <button className="button" id="left" onClick={() => setImgId(cur, -1)}>
           <img src=".\images\right-arrow.png" alt="" />
         </button>
-        <button className="button" id="right" onClick={() => setImgId(cur, -1)}>
+        <button className="button" id="right" onClick={() => setImgId(cur, +1)}>
           <img src=".\images\right-arrow.png" alt="" />
         </button>
       </div>

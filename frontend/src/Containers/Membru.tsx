@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./membru.css";
 import { Member } from "./Membri";
 
-function Membru({ poza, nume, functie, tip }: Member) {
+function Membru({ poza, nume, functie, tip, links, types }: Member) {
   // console.log(poza);
 
   return (
@@ -38,6 +38,15 @@ function Membru({ poza, nume, functie, tip }: Member) {
         <h2>{nume}</h2>
         <hr id="border" />
         <h3>{functie}</h3>
+        <div className="links">
+          {links.map((link, i) => {
+            return (
+              <a href={links[i]} target="_blank">
+                <img src={".\\images\\profiles\\" + types[i] + ".png"} />
+              </a>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
