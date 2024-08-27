@@ -40,11 +40,11 @@ function Membru({ poza, nume, functie, tip, links, types }: Member) {
         <h3>{functie}</h3>
         <div className="links">
           {links.map((link, i) => {
-            return (
+            return link !== "" ? (
               <a href={links[i]} target="_blank">
                 <img src={".\\images\\profiles\\" + types[i] + ".png"} />
               </a>
-            );
+            ) : null;
           })}
         </div>
       </div>
