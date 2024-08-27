@@ -12,7 +12,7 @@ export interface Member {
 }
 
 function Membri() {
-  const [backendData, setBackendData] = useState([[]]);
+  const [backendData, setBackendData] = useState<Member[]>([]);
   const [cur, setCur] = useState(0);
 
   useEffect(() => {
