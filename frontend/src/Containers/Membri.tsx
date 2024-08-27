@@ -7,11 +7,10 @@ export interface Member {
   nume: string;
   functie: string;
   tip: string;
-  id?: string;
 }
 
 function Membri() {
-  const [backendData, setBackendData] = useState([[]]);
+  const [backendData, setBackendData] = useState<Member[]>([]);
   const [cur, setCur] = useState(0);
 
   useEffect(() => {
