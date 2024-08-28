@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('./db'); // Import the database connection
+const pool = require('./db'); // Import the database connection
 const cors = require('cors');
 
 const app = express();
@@ -23,39 +23,52 @@ app.use(cors({
 }));
 
 app.get("/members", (req, res) => {
-    getAllMembers((err, members) => {
+    pool.getConnection((err, connection) => {
         if (err) {
-            return res.status(500).json({ error: 'Database query error' });
+          console.error('Error getting connection from pool:', err);
+          return;
         }
+    
+        const query = "SELECT * FROM team";
 
-        const nonMentors = members.filter(member => member.mentor === 0);
-        res.json(nonMentors);
-    });
-});
+        pool.query(query, (err, result) => {
+            
+            connection.release();
 
-app.get("/mentors", (req, res) => {
-    getAllMembers((err, members) => {
-        if (err) {
-            return res.status(500).json({ error: 'Database query error' });
-        }
-
-        const nonMentors = members.filter(member => member.mentor === 1);
-        res.json(nonMentors);
+            if (err) {
+                console.error("An error has occurred:", err);
+                res.status(500).json({ error: "Database query error" });
+                return;
+            }
+            
+            res.json(result);
+        });
     });
 });
 
 app.get("/seasons", (req, res) =>{
-    const query="SELECT * FROM Seasons";
 
-    db.query(query, (err, result) =>{
+    pool.getConnection((err, connection) => {
+
         if(err){
-            console.error("An error has occured:", err);
-            res.status(500).json({error: "Database query error"});
+            console.error('Error getting connection from pool:', err);
             return;
         }
 
-        res.json(result);
-    })
+        const query="SELECT * FROM Seasons";
+
+        pool.query(query, (err, result) =>{
+
+            connection.release();
+            if(err){
+                console.error("An error has occured:", err);
+                res.status(500).json({error: "Database query error"});
+                return;
+            }
+
+            res.json(result);
+        });
+    });
 })
 
 app.listen(port, () => {

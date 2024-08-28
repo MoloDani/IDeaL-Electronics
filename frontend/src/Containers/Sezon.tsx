@@ -4,15 +4,15 @@ import "./sezon.css";
 
 // Asta e un card pentru un singru sezon
 
-function Sezon({ numeSez, rezultate }: sez) {
+function Sezon({ name, img, awardType1, rewardPlace1, competitionStage1, 
+  awardType2, rewardPlace2, competitionStage2 }: sez) {
   return (
     <div className="sezCard">
       <div className="logoSez">
-        <h1>{numeSez}</h1>
+      <img src={"data:image/jpeg;base64, " + img} alt={"logo sezon: " + name} />
+      <h1>name</h1>
       </div>
-      {rezultate.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
+      
     </div>
   );
 }
