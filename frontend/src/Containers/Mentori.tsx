@@ -1,22 +1,14 @@
 import { useState, useEffect } from "react";
-import "./membri.css";
+import "./mentori.css";
 import Membru from "./Membru";
+import { Member } from "./Membri";
 
-export interface Member {
-  poza: string;
-  nume: string;
-  functie: string;
-  tip: string;
-  links: string[];
-  types: string[];
-}
-
-function Membri() {
+function Mentori() {
   const [backendData, setBackendData] = useState<Member[]>([]);
   const [cur, setCur] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost:5000/members")
+    fetch("http://localhost:5000/mentors")
       .then((response) => response.json())
       .then((data) => {
         setBackendData(data);
@@ -51,10 +43,10 @@ function Membri() {
   };
 
   return (
-    <div className="container" id="members">
+    <div className="container" id="mentors">
       <div className="startText">
-        <h3>MEMBRI</h3>
-        <h2>Sa ne cunoastem mai bine!</h2>
+        <h3>MENTORI</h3>
+        <h2>Cine ne ajuta?</h2>
       </div>
 
       <div className="container">
@@ -82,4 +74,4 @@ function Membri() {
   );
 }
 
-export default Membri;
+export default Mentori;

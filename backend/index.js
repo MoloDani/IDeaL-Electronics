@@ -41,7 +41,31 @@ app.get("/members", (req, res) => {
                 return;
             }
             
-            res.json(result);
+            res.json(result.filter(mem => mem.mentor === 0));
+        });
+    });
+});
+
+app.get("/mentors", (req, res) => {
+    pool.getConnection((err, connection) => {
+        if (err) {
+          console.error('Error getting connection from pool:', err);
+          return;
+        }
+    
+        const query = "SELECT * FROM team";
+
+        pool.query(query, (err, result) => {
+            
+            connection.release();
+
+            if (err) {
+                console.error("An error has occurred:", err);
+                res.status(500).json({ error: "Database query error" });
+                return;
+            }
+            
+            res.json(result.filter(mem => mem.mentor === 1));
         });
     });
 });

@@ -6,6 +6,7 @@ import AboutUs from "./Containers/AboutUs";
 import Sezoane from "./Containers/Sezoane";
 import Membri from "./Containers/Membri";
 import Blob from "./Containers/Blob";
+import Mentori from "./Containers/Mentori";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <AboutUs />
       <Sezoane />
       <Membri />
+      <Mentori />
     </div>
   );
 }

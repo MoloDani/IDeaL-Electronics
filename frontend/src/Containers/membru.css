@@ -12,6 +12,7 @@
   width: 10em;
   height: 17em;
   transition: all 1s;
+  z-index: 10;
 }
 
 .side {
@@ -19,6 +20,7 @@
   height: 15em;
   font-size: 0.8em;
   transition: all 1s;
+  z-index: 9;
 }
 
 .left {
@@ -39,6 +41,7 @@
 
 .outside {
   display: none;
+  z-index: 8;
 }
 
 .imgContainer {
