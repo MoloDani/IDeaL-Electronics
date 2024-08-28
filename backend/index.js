@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('./db'); // Import the database connection
+const pool = require('./db'); // Import the database connection
 const cors = require('cors');
 
 const app = express();
@@ -10,31 +10,52 @@ app.use(cors({
 }));
 
 app.get("/members", (req, res) => {
-    const query = "SELECT * FROM team";
-
-    db.query(query, (err, result) => {
+    pool.getConnection((err, connection) => {
         if (err) {
-            console.error("An error has occurred:", err);
-            res.status(500).json({ error: "Database query error" });
-            return;
+          console.error('Error getting connection from pool:', err);
+          return;
         }
-        
-        res.json(result);
+    
+        const query = "SELECT * FROM team";
+
+        pool.query(query, (err, result) => {
+            
+            connection.release();
+
+            if (err) {
+                console.error("An error has occurred:", err);
+                res.status(500).json({ error: "Database query error" });
+                return;
+            }
+            
+            res.json(result);
+        });
     });
 });
 
 app.get("/seasons", (req, res) =>{
-    const query="SELECT * FROM Seasons";
 
-    db.query(query, (err, result) =>{
+    pool.getConnection((err, connection) => {
+
         if(err){
-            console.error("An error has occured:", err);
-            res.status(500).json({error: "Database query error"});
+            console.error('Error getting connection from pool:', err);
             return;
         }
 
-        res.json(result);
-    })
+        const query="SELECT * FROM Seasons";
+
+        pool.query(query, (err, result) =>{
+
+            connection.release();
+            if(err){
+                console.error("An error has occured:", err);
+                res.status(500).json({error: "Database query error"});
+                return;
+            }
+
+            res.json(result);
+        });
+    });
 })
 
 app.listen(port, () => {
