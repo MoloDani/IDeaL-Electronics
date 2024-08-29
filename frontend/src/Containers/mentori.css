@@ -1,4 +1,4 @@
-.containerMemb {
+.containerMent {
   height: 20em;
   width: 80%;
   display: flex;
@@ -10,6 +10,14 @@
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
+}
+
+.containerCards {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
 }
 
 .button {

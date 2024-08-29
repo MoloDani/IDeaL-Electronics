@@ -5,12 +5,21 @@
   border-radius: 1em;
   overflow: hidden;
   position: absolute;
+  padding-bottom: 10px;
 }
 
 .center {
   left: calc(50% - 5em);
   width: 10em;
   height: 17em;
+  transition: all 1s;
+  z-index: 10;
+}
+
+.centerMent {
+  left: calc(50% - 6.5em);
+  width: 13em;
+  height: 16em;
   transition: all 1s;
   z-index: 10;
 }
@@ -23,12 +32,28 @@
   z-index: 9;
 }
 
+.sideMent {
+  width: 11em;
+  height: 14em;
+  font-size: 0.8em;
+  transition: all 1s;
+  z-index: 9;
+}
+
 .left {
   left: -90%;
 }
 
 .right {
   left: 110%;
+}
+
+.leftMent {
+  left: -12em;
+}
+
+.rightMent {
+  left: calc(100% + 12em);
 }
 
 .next {
@@ -46,7 +71,7 @@
 
 .imgContainer {
   position: relative;
-  height: 65%;
+  height: 70%;
   width: 100%;
 }
 
@@ -127,8 +152,22 @@
     transition: all 1s;
   }
 
+  .centerMent {
+    box-shadow: 0 0 30px 8px var(--accent-green);
+    left: calc(50% - (15em / 2));
+    height: 18em;
+    width: 15em;
+    transition: all 1s;
+  }
+
   .side {
     height: 19em;
+    width: 11em;
+    transition: all 1s;
+  }
+
+  .sideMent {
+    height: 15em;
     width: 11em;
     transition: all 1s;
   }
@@ -139,6 +178,14 @@
 
   .right {
     left: calc(50% + (13em / 2) + 6em);
+  }
+
+  .leftMent {
+    left: calc(50% - (15em / 2) - 17em);
+  }
+
+  .rightMent {
+    left: calc(50% + (15em / 2) + 6em);
   }
 
   .next {

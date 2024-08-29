@@ -21,15 +21,15 @@ function Mentori() {
     return x;
   };
 
-  const cardType = (curInd: number, ind: number) => {
+  const cardType = (ind: number) => {
     const next = normalize(cur - 1);
     const prev = normalize(cur + 1);
     const outPrev = normalize(cur + 2);
     const outNext = normalize(cur - 2);
 
-    if (ind === curInd) return "center";
-    if (ind === next) return "side left";
-    if (ind === prev) return "side right";
+    if (ind === cur) return "centerMent";
+    if (ind === next) return "sideMent leftMent";
+    if (ind === prev) return "sideMent rightMent";
     if (ind === outPrev) return "side prev";
     if (ind === outNext) return "side next";
     return "outside";
@@ -49,15 +49,15 @@ function Mentori() {
         <h2>Cine ne ajuta?</h2>
       </div>
 
-      <div className="container">
-        <div className="containerMemb">
+      <div className="containerCards">
+        <div className="containerMent">
           {backendData.map((membru, i) => (
             <Membru
               key={i}
               poza={membru.img}
               nume={membru.name}
               functie={membru.fct}
-              tip={cardType(cur, i)}
+              tip={cardType(i)}
               links={[membru.link1, membru.link2, membru.link3]}
               types={[membru.type1, membru.type2, membru.type3]}
             />

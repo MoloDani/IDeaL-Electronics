@@ -29,13 +29,13 @@ function Membri() {
     return x;
   };
 
-  const cardType = (curInd: number, ind: number) => {
+  const cardType = (ind: number) => {
     const next = normalize(cur - 1);
     const prev = normalize(cur + 1);
     const outPrev = normalize(cur + 2);
     const outNext = normalize(cur - 2);
 
-    if (ind === curInd) return "center";
+    if (ind === cur) return "center";
     if (ind === next) return "side left";
     if (ind === prev) return "side right";
     if (ind === outPrev) return "side prev";
@@ -57,7 +57,7 @@ function Membri() {
         <h2>Sa ne cunoastem mai bine!</h2>
       </div>
 
-      <div className="container">
+      <div className="containerCards">
         <div className="containerMemb">
           {backendData.map((membru, i) => (
             <Membru
@@ -65,7 +65,7 @@ function Membri() {
               poza={membru.img}
               nume={membru.name}
               functie={membru.fct}
-              tip={cardType(cur, i)}
+              tip={cardType(i)}
               links={[membru.link1, membru.link2, membru.link3]}
               types={[membru.type1, membru.type2, membru.type3]}
             />

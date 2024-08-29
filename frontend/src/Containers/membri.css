@@ -12,6 +12,14 @@
   overflow: hidden;
 }
 
+.containerCards {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+}
+
 .button {
   position: absolute;
   background-color: transparent;
