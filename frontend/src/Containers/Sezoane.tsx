@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Sezon from "./Sezon";
+import Blob from "./Blob";
 import "./sezoane.css";
 
 export interface sez {
@@ -75,7 +76,7 @@ function Sezoane() {
         <h3>SEZOANE</h3>
         <h2>Cu ce ne mandrim noi!</h2>
       </div>
-
+      <Blob topOffset={700} leftOffset={1150} />
       <div id="containerSez">
         {backendData.slice(0, seasonsShown).map((season: sez, i) => (
           <Sezon
