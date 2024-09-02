@@ -11,8 +11,22 @@ export interface Member {
   types: string[];
 }
 
+export interface dataBase {
+  ID: number;
+  name: string;
+  fct: string;
+  mentor: boolean;
+  img: string;
+  link1: string;
+  type1: string;
+  link2: string;
+  type2: string;
+  link3: string;
+  type3: string;
+}
+
 function Membri() {
-  const [backendData, setBackendData] = useState<Member[]>([]);
+  const [backendData, setBackendData] = useState<dataBase[]>([]);
   const [cur, setCur] = useState(0);
 
   useEffect(() => {
@@ -59,7 +73,7 @@ function Membri() {
 
       <div className="containerCards">
         <div className="containerMemb">
-          {backendData.map((membru, i) => (
+          {backendData.map((membru: dataBase, i) => (
             <Card
               key={i}
               poza={membru.img}

@@ -4,7 +4,7 @@ import Blob from "./Blob";
 function AboutUs() {
   return (
     <div className="container" id="about">
-      <Blob topOffset={100} leftOffset={-70} />
+      <Blob topOffset={100} leftOffset={-70} rightOffset={0} />
       <div className="startText">
         <h3>CU CE NE OCUPĂM</h3>
         <h2>Despre noi</h2>

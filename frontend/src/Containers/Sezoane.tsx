@@ -34,7 +34,7 @@ function Sezoane() {
       const elements = document.querySelectorAll(".sezon-card");
 
       elements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
+        const rect = (el as HTMLElement).getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
         // Calculate how much of the element is in the viewport
@@ -49,8 +49,10 @@ function Sezoane() {
           scrollRatio = Math.min(Math.max(scrollRatio, 0), 1);
 
           // Apply transform and opacity based on scroll position
-          el.style.transform = `translateY(${15 * scrollRatio}px)`;
-          el.style.opacity = `${1 - scrollRatio}`;
+          (el as HTMLElement).style.transform = `translateY(${
+            15 * scrollRatio
+          }px)`;
+          (el as HTMLElement).style.opacity = `${1 - scrollRatio}`;
         }
       });
     };
@@ -88,7 +90,7 @@ function Sezoane() {
         <h3>SEZOANE</h3>
         <h2>Cu ce ne mândrim noi!</h2>
       </div>
-      <Blob topOffset={700} leftOffset={-1} rightOffset={-10} />
+      <Blob topOffset={700} leftOffset={-1} rightOffset={-80} />
       <div ref={scrollTargetRef} id="containerSez">
         {backendData.slice(0, seasonsShown).map((season: sez, i) => (
           <Sezon

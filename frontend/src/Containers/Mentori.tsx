@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import "./mentori.css";
 import Card from "./Card";
-import { Member } from "./Membri";
+import { Member, dataBase } from "./Membri";
 
 function Mentori() {
-  const [backendData, setBackendData] = useState<Member[]>([]);
+  const [backendData, setBackendData] = useState<dataBase[]>([]);
   const [cur, setCur] = useState(0);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ function Mentori() {
 
       <div className="containerCards">
         <div className="containerMent">
-          {backendData.map((membru, i) => (
+          {backendData.map((membru: dataBase, i) => (
             <Card
               key={i}
               poza={membru.img}
