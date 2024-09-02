@@ -88,7 +88,7 @@ function Sezoane() {
         <h3>SEZOANE</h3>
         <h2>Cu ce ne mândrim noi!</h2>
       </div>
-      <Blob topOffset={700} leftOffset={1200} />
+      <Blob topOffset={700} leftOffset={-1} rightOffset={-10} />
       <div ref={scrollTargetRef} id="containerSez">
         {backendData.slice(0, seasonsShown).map((season: sez, i) => (
           <Sezon

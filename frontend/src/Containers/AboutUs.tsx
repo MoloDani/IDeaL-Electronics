@@ -9,10 +9,14 @@ function AboutUs() {
         <h3>CU CE NE OCUPĂM</h3>
         <h2>Despre noi</h2>
         <p className="longText">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-          sequi obcaecati nobis, minus eum accusantium velit nam laudantium,
-          aliquid quia deleniti facere numquam fugiat magnam commodi sunt
-          reprehenderit quaerat sed.
+          Suntem IDeaL Electronics, o echipă de robotică din Cugir, pasionată de
+          tehnologie și inovare. Compusă din elevi dedicați și mentori
+          entuziaști, echipa noastră a obținut rezultate remarcabile în
+          competițiile naționale și internaționale de robotică. Ne dorim să
+          inspirăm tinerii să exploreze știința, tehnologia, ingineria și
+          matematica, dezvoltând abilități valoroase într-un mediu creativ și
+          colaborativ. Suntem mereu deschiși să învățăm, să inovăm și să ne
+          depășim limitele, construind împreună roboții viitorului.
         </p>
       </div>
     </div>
