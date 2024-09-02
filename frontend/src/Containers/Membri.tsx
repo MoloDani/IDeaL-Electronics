@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./membri.css";
-import Membru from "./Membru";
+import Card from "./Card";
 
 export interface Member {
   poza: string;
@@ -60,7 +60,7 @@ function Membri() {
       <div className="containerCards">
         <div className="containerMemb">
           {backendData.map((membru, i) => (
-            <Membru
+            <Card
               key={i}
               poza={membru.img}
               nume={membru.name}

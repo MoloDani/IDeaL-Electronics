@@ -95,6 +95,31 @@ app.get("/seasons", (req, res) =>{
     });
 })
 
+app.get("/sponsori", (req, res) =>{
+
+    pool.getConnection((err, connection) => {
+
+        if(err){
+            console.error('Error getting connection from pool:', err);
+            return;
+        }
+
+        const query="SELECT * FROM sponsori";
+
+        pool.query(query, (err, result) =>{
+
+            connection.release();
+            if(err){
+                console.error("An error has occured:", err);
+                res.status(500).json({error: "Database query error"});
+                return;
+            }
+
+            res.json(result);
+        });
+    });
+})
+
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });

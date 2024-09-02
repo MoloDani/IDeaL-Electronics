@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./mentori.css";
-import Membru from "./Membru";
+import Card from "./Card";
 import { Member } from "./Membri";
 
 function Mentori() {
@@ -46,13 +46,13 @@ function Mentori() {
     <div className="container" id="mentors">
       <div className="startText">
         <h3>MENTORI</h3>
-        <h2>Cine ne ajuta?</h2>
+        <h2>Cine ne ajută?</h2>
       </div>
 
       <div className="containerCards">
         <div className="containerMent">
           {backendData.map((membru, i) => (
-            <Membru
+            <Card
               key={i}
               poza={membru.img}
               nume={membru.name}

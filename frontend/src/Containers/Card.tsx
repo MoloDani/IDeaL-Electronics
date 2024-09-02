@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./membru.css";
+import "./card.css";
 import { Member } from "./Membri";
 
-function Membru({ poza, nume, functie, tip, links, types }: Member) {
+function Card({ poza, nume, functie, tip, links, types }: Member) {
   // console.log(poza);
 
   return (
@@ -41,7 +41,7 @@ function Membru({ poza, nume, functie, tip, links, types }: Member) {
         <div className="links">
           {links.map((link, i) => {
             return link !== "" ? (
-              <a href={links[i]} target="_blank">
+              <a href={links[i]} target="_blank" key={i}>
                 <img src={".\\images\\profiles\\" + types[i] + ".png"} />
               </a>
             ) : null;
@@ -52,4 +52,4 @@ function Membru({ poza, nume, functie, tip, links, types }: Member) {
   );
 }
 
-export default Membru;
+export default Card;

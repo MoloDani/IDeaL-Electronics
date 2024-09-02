@@ -1,6 +1,5 @@
 :root {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -60,7 +59,7 @@ h3 {
 h2 {
   margin: 3px 0 7px 0;
   line-height: 1.2em;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
 }
 
 #teamNumber {

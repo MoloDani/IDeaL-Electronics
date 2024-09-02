@@ -7,6 +7,8 @@ import Sezoane from "./Containers/Sezoane";
 import Membri from "./Containers/Membri";
 import Blob from "./Containers/Blob";
 import Mentori from "./Containers/Mentori";
+import Contact from "./Containers/Contact";
+import Sponsori from "./Containers/Sponsori";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Sezoane />
       <Membri />
       <Mentori />
+      <Sponsori />
+      <Contact />
     </div>
   );
 }

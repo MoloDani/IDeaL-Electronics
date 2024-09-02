@@ -1,0 +1,37 @@
+#contact {
+  background: linear-gradient(to bottom, transparent 0, var(--dark-green1) 80%);
+  margin: 0 -7vw;
+  width: calc(100% + 14vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linksCnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.poza {
+  height: 1em;
+}
+
+.linksCnt a {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+@media only screen and (min-width: 700px) {
+  .linksCnt {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
