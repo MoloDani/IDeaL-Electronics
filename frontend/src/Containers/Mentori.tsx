@@ -46,7 +46,7 @@ function Mentori() {
     <div className="container" id="mentors">
       <div className="startText">
         <h3>MENTORI</h3>
-        <h2>Cine ne ajuta?</h2>
+        <h2>Cine ne ajută?</h2>
       </div>
 
       <div className="containerCards">

@@ -6,7 +6,7 @@ function AboutUs() {
     <div className="container" id="about">
       <Blob topOffset={100} leftOffset={-50} />
       <div className="startText">
-        <h3>CU CE NE OCUPAM</h3>
+        <h3>CU CE NE OCUPĂM</h3>
         <h2>Despre noi</h2>
         <p className="longText">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,

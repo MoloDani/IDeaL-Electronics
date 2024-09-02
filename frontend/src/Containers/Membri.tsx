@@ -54,7 +54,7 @@ function Membri() {
     <div className="container" id="members">
       <div className="startText">
         <h3>MEMBRI</h3>
-        <h2>Sa ne cunoastem mai bine!</h2>
+        <h2>Să ne cunoaștem mai bine!</h2>
       </div>
 
       <div className="containerCards">
