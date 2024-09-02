@@ -1,5 +1,5 @@
 .containerMent {
-  height: 20em;
+  height: 14em;
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -45,7 +45,7 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  .containerMemb {
-    height: 24em;
+  .containerMent {
+    height: 18em;
   }
 }

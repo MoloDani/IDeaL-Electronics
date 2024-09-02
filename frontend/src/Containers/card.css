@@ -9,17 +9,17 @@
 }
 
 .center {
-  left: calc(50% - 5em);
-  width: 10em;
+  left: calc(50% - (8em / 2));
+  width: 8em;
   height: 15em;
   transition: all 1s;
   z-index: 10;
 }
 
 .centerMent {
-  left: calc(50% - 6.5em);
-  width: 13em;
-  height: 14em;
+  left: calc(50% - (9em / 2));
+  width: 9em;
+  height: 12em;
   transition: all 1s;
   z-index: 10;
 }
