@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, RefObject } from "react";
 import Sezon from "./Sezon";
+import Blob from "./Blob";
 import "./sezoane.css";
 
 export interface sez {
@@ -87,7 +88,7 @@ function Sezoane() {
         <h3>SEZOANE</h3>
         <h2>Cu ce ne mândrim noi!</h2>
       </div>
-
+      <Blob topOffset={700} leftOffset={1200} />
       <div ref={scrollTargetRef} id="containerSez">
         {backendData.slice(0, seasonsShown).map((season: sez, i) => (
           <Sezon

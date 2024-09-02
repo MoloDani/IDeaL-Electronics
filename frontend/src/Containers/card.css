@@ -146,9 +146,9 @@
 @media only screen and (min-width: 1000px) {
   .center {
     box-shadow: 0 0 30px 8px var(--accent-green);
-    left: calc(50% - (13em / 2));
-    height: 20em;
-    width: 13em;
+    left: calc(50% - (11em / 2));
+    height: 16em;
+    width: 11em;
     transition: all 1s;
   }
 
@@ -161,7 +161,7 @@
   }
 
   .side {
-    height: 17em;
+    height: 16em;
     width: 11em;
     transition: all 1s;
   }
