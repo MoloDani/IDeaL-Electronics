@@ -70,7 +70,7 @@ function HeroSection() {
         <h2 id="teamNumber">{currentText}</h2>
       </div>
       <div className="imagine" id="teamPhoto">
-        <img src="\images\download.jpg" alt="team photo" />
+        <img src="\images\team2.jpg" alt="team photo" />
       </div>
     </div>
   );
