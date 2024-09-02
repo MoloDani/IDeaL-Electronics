@@ -11,7 +11,7 @@
 .center {
   left: calc(50% - 5em);
   width: 10em;
-  height: 17em;
+  height: 15em;
   transition: all 1s;
   z-index: 10;
 }
@@ -19,14 +19,14 @@
 .centerMent {
   left: calc(50% - 6.5em);
   width: 13em;
-  height: 16em;
+  height: 14em;
   transition: all 1s;
   z-index: 10;
 }
 
 .side {
   width: 9em;
-  height: 15em;
+  height: 13em;
   font-size: 0.8em;
   transition: all 1s;
   z-index: 9;
@@ -34,7 +34,7 @@
 
 .sideMent {
   width: 11em;
-  height: 14em;
+  height: 12em;
   font-size: 0.8em;
   transition: all 1s;
   z-index: 9;
@@ -71,7 +71,7 @@
 
 .imgContainer {
   position: relative;
-  height: 70%;
+  height: 65%;
   width: 100%;
 }
 
@@ -147,7 +147,7 @@
   .center {
     box-shadow: 0 0 30px 8px var(--accent-green);
     left: calc(50% - (13em / 2));
-    height: 22em;
+    height: 20em;
     width: 13em;
     transition: all 1s;
   }
@@ -155,19 +155,19 @@
   .centerMent {
     box-shadow: 0 0 30px 8px var(--accent-green);
     left: calc(50% - (15em / 2));
-    height: 18em;
+    height: 16em;
     width: 15em;
     transition: all 1s;
   }
 
   .side {
-    height: 19em;
+    height: 17em;
     width: 11em;
     transition: all 1s;
   }
 
   .sideMent {
-    height: 15em;
+    height: 13em;
     width: 11em;
     transition: all 1s;
   }
