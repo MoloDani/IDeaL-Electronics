@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, RefObject } from "react";
 import Sezon from "./Sezon";
 import "./sezoane.css";
 
@@ -11,12 +11,14 @@ export interface sez {
   awardType2: string;
   rewardPlace2: number;
   competitionStage2: string;
+  ind?: RefObject<HTMLDivElement> | null;
 }
 
 function Sezoane() {
   const [backendData, setBackendData] = useState<sez[]>([]);
   const [seasonsShown, setSeasonsShown] = useState(3);
   const [isChanged, setIsChanged] = useState(false);
+  const scrollTargetRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     fetch("http://localhost:5000/seasons")
@@ -67,6 +69,16 @@ function Sezoane() {
   const changeSeasonsShown = () => {
     setSeasonsShown(seasonsShown === 3 ? backendData.length : 3);
     setIsChanged(!isChanged);
+
+    if (isChanged && scrollTargetRef.current) {
+      const viewportHeight = window.innerHeight;
+      const offset = 0.8 * viewportHeight;
+      const pos = scrollTargetRef.current.offsetTop + offset;
+      window.scrollTo({
+        top: pos,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -76,7 +88,7 @@ function Sezoane() {
         <h2>Cu ce ne mandrim noi!</h2>
       </div>
 
-      <div id="containerSez">
+      <div ref={scrollTargetRef} id="containerSez">
         {backendData.slice(0, seasonsShown).map((season: sez, i) => (
           <Sezon
             key={i}
@@ -88,6 +100,7 @@ function Sezoane() {
             awardType2={season.awardType2}
             rewardPlace2={season.rewardPlace2}
             competitionStage2={season.competitionStage2}
+            ind={i === 2 ? scrollTargetRef : null}
           />
         ))}
       </div>
@@ -100,7 +113,9 @@ function Sezoane() {
         <img
           src="./images/right-arrow.png"
           alt="toggle button for dropdown"
-          className={`dropdownButton ${isChanged ? "rotate-up" : "rotate-down"}`}
+          className={`dropdownButton ${
+            isChanged ? "rotate-up" : "rotate-down"
+          }`}
         />
       </button>
     </div>

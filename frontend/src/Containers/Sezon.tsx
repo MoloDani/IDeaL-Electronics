@@ -13,9 +13,10 @@ function Sezon({
   awardType2,
   rewardPlace2,
   competitionStage2,
+  ind,
 }: sez) {
   return (
-    <div className="sezCard sezon-card">
+    <div ref={ind} className="sezCard sezon-card">
       <div className="logoSez">
         <img
           src={"data:image/jpeg;base64, " + img}

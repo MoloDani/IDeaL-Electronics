@@ -27,11 +27,10 @@ function Sponsori() {
 
         <div className="containerSpons">
           {backendData.map((item, i) => (
-            <a href={item.link} target="_blank">
+            <a href={item.link} target="_blank" key={item.ID}>
               <img
                 src={"data:image/jpeg;base64, " + item.img}
                 alt={item.name}
-                key={item.ID}
               />
             </a>
           ))}
